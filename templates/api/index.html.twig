@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ApiController!{% endblock %}
+
+{% block body %}
+<div {{ stimulus_controller('api', { apiUrl: path('api') }) }}>
+    
+    <div id="result" class="result"></div>
+    <button value="Send post" {{ stimulus_action('api', 'sendPost') }} />
+        Send post
+    </button>
+</div>
+{% endblock %}
